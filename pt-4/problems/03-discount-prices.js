@@ -13,7 +13,19 @@
 
 */
 
-// Your code here
+const discountPrices = (arrPrice, arrDiscount) => {
+    let newPrice = [];
+    for (let index in arrPrice){
+        let price = arrPrice[index]
+        let discount = arrDiscount[index]
+
+        newPrice.push('$' + (price - (price * discount)).toFixed(2));
+    }
+    console.log(newPrice)
+
+    return newPrice;
+}
+
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
