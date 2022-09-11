@@ -15,9 +15,25 @@ Least common flavor:
 */
 
 function leastCommonFlavor(candyBag) {
+    let values = Object.values(candyBag);
+    let keys = Object.keys(candyBag);
 
+    if (keys.length === 0){
+        return null;
+    }
+    return keys[lowestNum(values)];
 }
 
+function lowestNum(array){
+    let res = array.reduce((acc, num) => {
+        if (num < acc){
+           return num;
+        } else {
+            return acc;
+        }
+    });
+    return array.indexOf(res);
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {

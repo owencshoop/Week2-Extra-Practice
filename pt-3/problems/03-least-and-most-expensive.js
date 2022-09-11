@@ -13,7 +13,31 @@ Least and Most Expensive Toys:
 */
 
 function leastAndMostExpensive(catalog) {
-    let values = Object.values(catalog
+    let values = Object.values(catalog);
+    let keys = Object.keys(catalog);
+    let leastAndMost = [(keys[lowestNum(values)]), (keys[highestNum(values)])]
+    return leastAndMost;
+}
+
+function lowestNum(array){
+    let res = array.reduce((acc, num) => {
+        if (num < acc){
+           return num;
+        } else {
+            return acc;
+        }
+    });
+    return array.indexOf(res);
+}
+function highestNum(array){
+    let res = array.reduce((acc, num) => {
+        if (num > acc){
+           return num;
+        } else {
+            return acc;
+        }
+    });
+    return array.indexOf(res);
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

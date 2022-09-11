@@ -13,10 +13,25 @@
                         {name: 'omakase bento box', price: 100},
                         {name: 'medicine', price: 50}
                     ]
-    
-    console.log(itemsWithinBudget(1000, items1)) // prints ['iPhone', 'guitar'] 
+
+    console.log(itemsWithinBudget(1000, items1)) // prints ['iPhone', 'guitar']
     console.log(itemsWithinBudget(200, items2)) // prints ['omakase bento box', 'medicine']
 */
+
+// function that accepts budget number and array
+const itemsWithinBudget = (budget, items) => {
+    let budgetItems = [];// new array of object names in budget
+    for (let obj of items){
+        // iterate through each object
+        // if object.price is less than budget - push object.name to new array
+        if (obj.price <= budget){
+            budgetItems.push((obj.name));
+        }
+    }
+    return budgetItems;
+    //return new object array
+}
+
 
 
 
